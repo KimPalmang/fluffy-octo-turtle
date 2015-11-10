@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>My {{ctrl.friends.length}} friends</h1>
+  <div class="row" ng-repeat="friend in ctrl.friends">
+    <div class="col-md-2">
+      <img ng-src="{{friend.photo}}" class="img-responsive img-thumbnail">
+    </div>
+    <div class="col-md-2">
+      <a ng-href="#/friend/{{friend.id}}">{{friend.name}}</a>
+    </div>
+    <div class="col-md-2">
+      {{friend.status}}
+    </div>
+    <div class="col-md-2">
+      {{friend.adress}}
+    </div>
+    <div class="col-md-4">
+      <button class="btn" ng-click="ctrl.deleteThisFriend(friend.id)"><i class="glyphicon glyphicon-trash"></i></button>
+    </div>
+  </div>
+
+</div>
